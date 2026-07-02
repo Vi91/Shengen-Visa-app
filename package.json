@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "node node_modules/.pnpm/esbuild@0.28.1/node_modules/esbuild/bin/esbuild src/app.jsx --bundle --outfile=script.js --format=iife --minify --define:process.env.NODE_ENV='\"production\"'"
+  },
+  "dependencies": {
+    "@babel/standalone": "^8.0.3",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.1"
+  }
+}

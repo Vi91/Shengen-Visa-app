@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Schengen Stay Tracker icon</title>
+  <desc id="desc">Green app icon with 90 slash 180 travel rule text.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#243128" />
+      <stop offset="100%" stop-color="#3c9d5a" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="132" fill="url(#bg)" />
+  <rect x="72" y="78" width="368" height="356" rx="42" fill="#fffaf2" opacity="0.94" />
+  <path d="M146 170c24-22 52-34 88-34 58 0 102 34 102 90 0 56-43 92-108 92h-34v56h-48V170zm48 38v72h30c39 0 64-21 64-55 0-31-24-48-58-48-14 0-26 2-36 7z" fill="#243128"/>
+  <path d="M332 156h44l-120 206h-44z" fill="#b07a13"/>
+  <text x="128" y="418" font-size="78" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-weight="700" fill="#177e89">90/180</text>
+</svg>
