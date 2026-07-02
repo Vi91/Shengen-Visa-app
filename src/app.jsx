@@ -158,7 +158,7 @@ const TRANSLATIONS = {
       eyebrow: "Schengen Kural Asistanı",
       title: "Kalış günlerini takip edin. Planları önceden test edin.",
       copy:
-        "Geçmiş ekranıyla Schengen'de geçirdiğiniz tarihleri kaydedin, sonra seyahat planları ekranında gelecek ziyaretleri aynı hareketli pencereye göre test edin.",
+        "Geçmişi Aç sayfasına Schengen bölgesinde geçirdiğiniz tarihleri girin, Planları Aç sayfasına gelecek dönem seyahat tarihlerinizi ekleyin, kural ihlali olursa sistem sizi uyaracak.",
       addHistory: "Geçmiş ekle",
       checkPlans: "Planları kontrol et",
       daysLeftToday: "Bugün kalan gün",
