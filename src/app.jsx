@@ -121,10 +121,10 @@ const TRANSLATIONS = {
   },
   tr: {
     locale: "tr-TR",
-    weekdays: ["Pzt", "Sal", "Car", "Per", "Cum", "Cmt", "Paz"],
+    weekdays: ["Pzt", "Sal", "Çar", "Per", "Cum", "Cmt", "Paz"],
     routes: {
-      overview: "Genel Bakis",
-      history: "Gecmis",
+      overview: "Genel Bakış",
+      history: "Geçmiş",
       plans: "Planlar",
     },
     language: {
@@ -133,96 +133,96 @@ const TRANSLATIONS = {
       turkish: "TR",
     },
     brand: {
-      title: "Schengen Kalis Takibi",
-      subtitle: "90/180 gun kurali",
+      title: "Schengen Kalış Takibi",
+      subtitle: "90/180 gün kuralı",
       intro:
-        "Gecmis Schengen gunlerinizi kaydedin, sonra gelecekteki seyahatleri rezervasyon yapmadan once kontrol edin.",
+        "Geçmiş Schengen günlerinizi kaydedin, sonra gelecekteki seyahatlerinizi rezervasyon yapmadan önce kontrol edin.",
       note:
-        "AB vatandasi olmayan ziyaretciler, hareketli herhangi bir 180 gunluk donemde en fazla 90 gun kalabilir. Bu uygulama secilen her gunu Schengen'de gecirilmis gun olarak sayar.",
+        "AB vatandaşı olmayan ziyaretçiler, hareketli herhangi bir 180 günlük dönemde en fazla 90 gün kalabilir. Bu uygulama seçilen her günü Schengen'de geçirilmiş gün olarak sayar.",
     },
     nav: {
       overview: {
-        label: "Genel Bakis",
-        description: "Kural durumu ve sonraki adimlar",
+        label: "Genel Bakış",
+        description: "Kural durumu ve sonraki adımlar",
       },
       history: {
-        label: "Seyahat Gecmisi",
-        description: "Schengen'de gecirdiginiz gunleri isaretleyin",
+        label: "Seyahat Geçmişi",
+        description: "Schengen'de geçirdiğiniz günleri işaretleyin",
       },
       plans: {
-        label: "Seyahat Planlari",
-        description: "Gelecek tarihleri kurala gore test edin",
+        label: "Seyahat Planları",
+        description: "Gelecek tarihleri kurala göre test edin",
       },
     },
     hero: {
-      eyebrow: "Schengen Kural Asistani",
-      title: "Gercek kalis gunlerini takip edin. Planlari sorun olmadan once test edin.",
+      eyebrow: "Schengen Kural Asistanı",
+      title: "Kalış günlerini takip edin. Planları önceden test edin.",
       copy:
-        "Gecmis ekraniyla Schengen'de gecirdiginiz tarihleri kaydedin, sonra seyahat planlari ekraninda gelecek ziyaretleri ayni hareketli pencereye gore test edin.",
-      addHistory: "Gecmis ekle",
-      checkPlans: "Planlari kontrol et",
-      daysLeftToday: "Bugun kalan gun",
+        "Geçmiş ekranıyla Schengen'de geçirdiğiniz tarihleri kaydedin, sonra seyahat planları ekranında gelecek ziyaretleri aynı hareketli pencereye göre test edin.",
+      addHistory: "Geçmiş ekle",
+      checkPlans: "Planları kontrol et",
+      daysLeftToday: "Bugün kalan gün",
       planStatus: "Plan durumu",
-      noPlan: "Henuz plan yok",
-      within: "Sinir icinde",
-      violates: "Kurali ihlal ediyor",
+      noPlan: "Henüz plan yok",
+      within: "Sınır içinde",
+      violates: "Kuralı ihlal ediyor",
     },
     overview: {
       kicker: "Panel",
-      title: "Mevcut Schengen ozeti",
+      title: "Mevcut Schengen özeti",
       subtitle:
-        "Burasi ne kadar hakkiniz kaldigini ve mevcut planin guvenli olup olmadigini gormenin en hizli yoludur.",
-      usedDays: "Son 180 gunde kullanilan gun",
-      daysLeft: "Su anda kalan gun",
-      plannedDays: "Planlanan gelecek gunleri",
-      recordTitle: "Seyahat gecmisini kaydet",
-      recordCopy: "Schengen icinde bulundugunuz gecmis tarihleri ekleyin veya duzeltin.",
-      recordAction: "Gecmisi ac",
-      validateTitle: "Bir seyahati dogrula",
+        "Burası ne kadar hakkınız kaldığını ve mevcut planın güvenli olup olmadığını görmenin en hızlı yoludur.",
+      usedDays: "Son 180 günde kullanılan gün",
+      daysLeft: "Şu anda kalan gün",
+      plannedDays: "Planlanan gelecek günleri",
+      recordTitle: "Seyahat geçmişini kaydet",
+      recordCopy: "Schengen içinde bulunduğunuz geçmiş tarihleri ekleyin veya düzeltin.",
+      recordAction: "Geçmişi aç",
+      validateTitle: "Bir seyahati doğrula",
       validateCopy:
-        "Gelecek seyahat gunlerini secin; uygulama kurali bozan ilk tarihi gosterecektir.",
-      validateAction: "Planlari ac",
-      ruleTitle: "Sonucu anlayin",
+        "Gelecek seyahat günlerini seçin; uygulama kuralı bozan ilk tarihi gösterecektir.",
+      validateAction: "Planları aç",
+      ruleTitle: "Sonucu anlayın",
       ruleCopy:
-        "Secilen her gun, kontrol edilen tarihte biten hareketli 180 gunluk pencerenin toplamina eklenir.",
-      ruleAction: "Kurali incele",
+        "Seçilen her gün, kontrol edilen tarihte biten hareketli 180 günlük pencerenin toplamına eklenir.",
+      ruleAction: "Kuralı incele",
     },
     history: {
-      kicker: "Adim 1",
-      title: "Seyahat gecmisi",
+      kicker: "Adım 1",
+      title: "Seyahat geçmişi",
       subtitle:
-        "Schengen bolgesinde fiziksel olarak bulundugunuz tarihlere dokunun veya kaydirin. Secilen tarihler yesil olur.",
-      clear: "Gecmisi temizle",
-      selectedDays: "Gecmiste secilen gun",
-      usedDays: "Son 180 gunde kullanilan gun",
-      daysLeft: "Su anda kalan gun",
+        "Schengen bölgesinde fiziksel olarak bulunduğunuz tarihlere dokunun veya kaydırın. Seçilen tarihler yeşil olur.",
+      clear: "Geçmişi temizle",
+      selectedDays: "Geçmişte seçilen gün",
+      usedDays: "Son 180 günde kullanılan gün",
+      daysLeft: "Şu anda kalan gün",
       visitedTitle: "Ziyaret edilen tarihler",
-      visitedCaption: "Bugunden 180 gun once ile bugun arasi",
-      continue: "Seyahat planlarina gec",
+      visitedCaption: "Bugünden 180 gün önce ile bugün arası",
+      continue: "Seyahat planlarına geç",
     },
     plans: {
-      kicker: "Adim 2",
-      title: "Seyahat planlari",
+      kicker: "Adım 2",
+      title: "Seyahat planları",
       subtitle:
-        "Schengen'de gecirmek istediginiz gelecek tarihlere dokunun veya kaydirin. Gecersiz plan tarihleri kirmizi gorunur.",
-      clear: "Planlari temizle",
-      historySaved: "Kaydedilen gecmis tarihleri",
-      selectedDays: "Secilen plan gunleri",
-      daysLeftAfterPlan: "Plan sonrasi kalan gun",
+        "Schengen'de geçirmek istediğiniz gelecek tarihlere dokunun veya kaydırın. Geçersiz plan tarihleri kırmızı görünür.",
+      clear: "Planları temizle",
+      historySaved: "Kaydedilen geçmiş tarihleri",
+      selectedDays: "Seçilen plan günleri",
+      daysLeftAfterPlan: "Plan sonrası kalan gün",
       plannedTitle: "Planlanan tarihler",
-      plannedCaption: "Bugunden sonraki 12 ay",
-      back: "Gecmise don",
-      returnToOverview: "Genel bakisa don",
+      plannedCaption: "Bugünden sonraki 12 ay",
+      back: "Geçmişe dön",
+      returnToOverview: "Genel bakışa dön",
     },
     callout: {
-      noPlanTitle: "Plan secilmedi",
+      noPlanTitle: "Plan seçilmedi",
       noPlanCopy:
-        "Seyahat planlari ekraninda gelecek tarihleri ekleyin; planin hareketli 90/180 gun kuralina uyup uymadigini gorun.",
+        "Seyahat planları ekranında gelecek tarihleri ekleyin; planın hareketli 90/180 gün kuralına uyup uymadığını görün.",
       validTitle: "Mevcut plan kurala uyuyor",
-      invalidTitle: "Mevcut plan kurali bozuyor",
+      invalidTitle: "Mevcut plan kuralı bozuyor",
       pending: "Bekliyor",
-      valid: "Gecerli",
-      invalid: "Ihlal",
+      valid: "Geçerli",
+      invalid: "İhlal",
     },
   },
 };
@@ -268,7 +268,7 @@ function App() {
   };
 
   return (
-    <div className="app-shell">
+    <div className={`app-shell is-${language}`} lang={locale}>
       <div className="app-toolbar">
         <LanguageSwitcher language={language} onChange={setLanguage} t={t.language} />
       </div>
@@ -666,23 +666,43 @@ function CalendarPanel({
   locale,
   weekdayLabels,
 }) {
+  const calendarRef = useRef(null);
   const dragModeRef = useRef(null);
   const activePointerIdRef = useRef(null);
   const touchedDatesRef = useRef(new Set());
 
   useEffect(() => {
-    const applyDateAtPoint = (clientX, clientY) => {
+    const findDateAtPagePoint = (pageX, pageY) => {
+      const dateButtons = calendarRef.current?.querySelectorAll?.("[data-date-button='true']");
+      if (!dateButtons?.length) {
+        return null;
+      }
+
+      for (const button of dateButtons) {
+        if (button.dataset.disabled === "true") {
+          continue;
+        }
+
+        const rect = button.getBoundingClientRect();
+        const left = rect.left + window.scrollX;
+        const right = rect.right + window.scrollX;
+        const top = rect.top + window.scrollY;
+        const bottom = rect.bottom + window.scrollY;
+
+        if (pageX >= left && pageX <= right && pageY >= top && pageY <= bottom) {
+          return button.dataset.date ?? null;
+        }
+      }
+
+      return null;
+    };
+
+    const applyDateAtPoint = (pageX, pageY) => {
       if (!dragModeRef.current) {
         return;
       }
 
-      const target = document.elementFromPoint(clientX, clientY);
-      const dateButton = target?.closest?.("[data-date-button='true']");
-      if (!dateButton || dateButton.dataset.disabled === "true") {
-        return;
-      }
-
-      const iso = dateButton.dataset.date;
+      const iso = findDateAtPagePoint(pageX, pageY);
       if (!iso || touchedDatesRef.current.has(iso)) {
         return;
       }
@@ -696,7 +716,7 @@ function CalendarPanel({
         return;
       }
 
-      applyDateAtPoint(event.clientX, event.clientY);
+      applyDateAtPoint(event.pageX, event.pageY);
     };
 
     const stopDragging = () => {
@@ -737,7 +757,7 @@ function CalendarPanel({
         </div>
       </div>
 
-      <div className="calendar-grid">
+      <div className="calendar-grid" ref={calendarRef}>
         {months.map((monthDate) => (
           <MonthCard
             key={toIsoDate(monthDate)}
@@ -1049,7 +1069,7 @@ function sanitizeLanguage(value) {
 
 function buildValidPlanCopy(remainingDays, locale) {
   if (locale === "tr-TR") {
-    return `Secilen tum seyahat tarihleri limit icinde kaliyor. Son plan tarihinden sonra ${remainingDays} gun daha kalir.`;
+    return `Seçilen tüm seyahat tarihleri limit içinde kalıyor. Son plan tarihinden sonra ${remainingDays} gün daha kalır.`;
   }
 
   return `All selected travel dates stay within the limit. ${remainingDays} day(s) would still remain after the last planned day.`;
@@ -1059,7 +1079,7 @@ function buildInvalidPlanCopy(firstViolationDate, violatingCount, locale) {
   const dateLabel = formatHumanDate(firstViolationDate, locale);
 
   if (locale === "tr-TR") {
-    return `Kurali bozan ilk tarih ${dateLabel}. O gun hareketli 180 gun toplami ${violatingCount} olur.`;
+    return `Kuralı bozan ilk tarih ${dateLabel}. O gün hareketli 180 günlük toplam ${violatingCount} olur.`;
   }
 
   return `The first violating date is ${dateLabel}. That day would raise the rolling 180-day total to ${violatingCount}.`;

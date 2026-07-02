@@ -108,6 +108,10 @@ button {
   align-items: center;
 }
 
+.brand-copy {
+  min-width: 0;
+}
+
 .brand-title,
 .hero-card h1,
 .page-title,
@@ -117,6 +121,7 @@ button {
   margin: 0;
   font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
   font-weight: 600;
+  text-wrap: balance;
 }
 
 .brand-copy p,
@@ -332,6 +337,18 @@ button {
 
 .page-title {
   font-size: clamp(1.6rem, 3vw, 2.3rem);
+}
+
+.app-shell.is-tr .brand-title,
+.app-shell.is-tr .page-title {
+  line-height: 1.08;
+  max-width: 18ch;
+}
+
+.app-shell.is-tr .hero-card h1 {
+  max-width: 16ch;
+  font-size: clamp(1.95rem, 3.6vw, 3.15rem);
+  line-height: 1.08;
 }
 
 .page-actions,
