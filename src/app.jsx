@@ -667,38 +667,65 @@ function CalendarPanel({
   weekdayLabels,
 }) {
   const dragModeRef = useRef(null);
+  const activePointerIdRef = useRef(null);
   const touchedDatesRef = useRef(new Set());
 
   useEffect(() => {
+    const applyDateAtPoint = (clientX, clientY) => {
+      if (!dragModeRef.current) {
+        return;
+      }
+
+      const target = document.elementFromPoint(clientX, clientY);
+      const dateButton = target?.closest?.("[data-date-button='true']");
+      if (!dateButton || dateButton.dataset.disabled === "true") {
+        return;
+      }
+
+      const iso = dateButton.dataset.date;
+      if (!iso || touchedDatesRef.current.has(iso)) {
+        return;
+      }
+
+      touchedDatesRef.current.add(iso);
+      onApplyDate(iso, dragModeRef.current === "add");
+    };
+
+    const handlePointerMove = (event) => {
+      if (activePointerIdRef.current == null || event.pointerId !== activePointerIdRef.current) {
+        return;
+      }
+
+      applyDateAtPoint(event.clientX, event.clientY);
+    };
+
     const stopDragging = () => {
       dragModeRef.current = null;
+      activePointerIdRef.current = null;
       touchedDatesRef.current.clear();
     };
 
+    window.addEventListener("pointermove", handlePointerMove);
     window.addEventListener("pointerup", stopDragging);
     window.addEventListener("pointercancel", stopDragging);
 
     return () => {
+      window.removeEventListener("pointermove", handlePointerMove);
       window.removeEventListener("pointerup", stopDragging);
       window.removeEventListener("pointercancel", stopDragging);
     };
-  }, []);
+  }, [onApplyDate]);
 
-  const handleDayPointerDown = (iso, isSelected) => {
+  const handleDayPointerDown = (event, iso, isSelected) => {
     const nextMode = isSelected ? "remove" : "add";
     dragModeRef.current = nextMode;
+    activePointerIdRef.current = event.pointerId;
     touchedDatesRef.current.clear();
     touchedDatesRef.current.add(iso);
-    onApplyDate(iso, nextMode === "add");
-  };
-
-  const handleDayPointerEnter = (iso) => {
-    if (!dragModeRef.current || touchedDatesRef.current.has(iso)) {
-      return;
+    if (event.currentTarget.setPointerCapture) {
+      event.currentTarget.setPointerCapture(event.pointerId);
     }
-
-    touchedDatesRef.current.add(iso);
-    onApplyDate(iso, dragModeRef.current === "add");
+    onApplyDate(iso, nextMode === "add");
   };
 
   return (
@@ -721,7 +748,6 @@ function CalendarPanel({
             minDate={minDate}
             maxDate={maxDate}
             onDayPointerDown={handleDayPointerDown}
-            onDayPointerEnter={handleDayPointerEnter}
             locale={locale}
             weekdayLabels={weekdayLabels}
           />
@@ -739,7 +765,6 @@ function MonthCard({
   minDate,
   maxDate,
   onDayPointerDown,
-  onDayPointerEnter,
   locale,
   weekdayLabels,
 }) {
@@ -808,11 +833,13 @@ function MonthCard({
               className={className}
               disabled={isDisabled}
               aria-pressed={isSelected}
+              data-date-button="true"
+              data-date={iso}
+              data-disabled={isDisabled ? "true" : "false"}
               onPointerDown={(event) => {
                 event.preventDefault();
-                onDayPointerDown(iso, isSelected);
+                onDayPointerDown(event, iso, isSelected);
               }}
-              onPointerEnter={() => onDayPointerEnter(iso)}
             >
               {day}
             </button>
